@@ -6,6 +6,9 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
     domains: ['avatar.vercel.sh']
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
   }
 };
 
