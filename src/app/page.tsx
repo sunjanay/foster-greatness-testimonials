@@ -2,6 +2,14 @@ import { cn } from "@/lib/utils";
 import { Marquee } from "@/registry/magicui/marquee";
 import Image from "next/image";
 
+const gradients = [
+  "linear-gradient(135deg, #f16549, #fdb719)",
+  "linear-gradient(135deg, #fdb719, #03b2a3)",
+  "linear-gradient(135deg, #03b2a3, #0067a2)",
+  "linear-gradient(135deg, #0067a2, #253353)",
+  "linear-gradient(135deg, #253353, #f16549)"
+];
+
 const reviews = [
   {
     name: "Zoey Dunkel",
@@ -121,6 +129,8 @@ const ReviewCard = ({
   username: string;
   body: string;
 }) => {
+  const randomGradient = gradients[Math.floor(Math.random() * gradients.length)];
+
   return (
     <figure
       className={cn(
@@ -135,7 +145,7 @@ const ReviewCard = ({
         <div
           className="w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-bold"
           style={{
-            background: `linear-gradient(135deg, #f16549 0%, #03b2a3 25%, #fdb719 50%, #0067a2 75%, #253353 100%)`
+            background: randomGradient
           }}
         >
           {name.charAt(0)}
