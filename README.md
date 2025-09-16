@@ -1,36 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Foster Greatness Testimonials Widget
 
-## Getting Started
+A beautiful, responsive testimonials widget featuring scrolling marquee animations built with Next.js, React, and MagicUI.
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- 🎡 **Dual Marquee Animation** - Two rows of testimonials scrolling in opposite directions
+- 📱 **Fully Responsive** - Works perfectly on all device sizes
+- ⚡ **Next.js Optimized** - Fast loading and SEO-friendly
+- 🎨 **Beautiful Design** - Clean cards with avatars and smooth animations
+- ⏸️ **Interactive** - Hover to pause animations
+- 🌐 **Easy Integration** - Ready for Squarespace, WordPress, or any platform
+
+## 🎯 Live Demo
+
+View the live widget: [Foster Greatness Testimonials](https://foster-greatness-testimonials.vercel.app)
+
+## 🚀 Quick Start
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/sunjanay/foster-greatness-testimonials.git
+   cd foster-greatness-testimonials
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Run development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open in browser**
+   Navigate to `http://localhost:3000`
+
+## 📦 Deployment
+
+### Vercel (Recommended)
+1. Fork this repository
+2. Connect to Vercel
+3. Deploy automatically
+
+### Other Platforms
+- For static hosting: `npm run build` creates an exportable site
+- For Squarespace: Use the provided embed code in `squarespace-embed-code.html`
+
+## 🎨 Customization
+
+### Adding New Testimonials
+Edit the `reviews` array in `src/app/page.tsx`:
+
+```javascript
+const reviews = [
+  {
+    name: "John Doe",
+    username: "@john",
+    body: "Your testimonial text here.",
+    img: "https://avatar.vercel.sh/john",
+  },
+  // Add more testimonials...
+];
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Styling
+- Modify colors and styles in the component files
+- Adjust animation speed by changing `[--duration:20s]` values
+- Customize card layouts in the `ReviewCard` component
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Framework**: Next.js 15
+- **Styling**: Tailwind CSS
+- **Animation**: MagicUI Marquee
+- **Language**: TypeScript
+- **Deployment**: Vercel
 
-## Learn More
+## 📄 Files Included
 
-To learn more about Next.js, take a look at the following resources:
+- `src/app/page.tsx` - Main testimonials widget
+- `foster-greatness-testimonials.html` - Standalone HTML version
+- `squarespace-embed-code.html` - Squarespace-ready embed code
+- `src/registry/magicui/marquee.tsx` - Marquee component
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 💡 Integration
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Squarespace
+Use the code from `squarespace-embed-code.html` in a Code Block.
 
-## Deploy on Vercel
+### WordPress
+Embed the standalone HTML file or use the Vercel deployment URL.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Other Platforms
+Use the provided HTML files or iframe the Vercel deployment.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🤝 Contributing
+
+Feel free to submit issues and enhancement requests!
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+💫 **Built with [Claude Code](https://claude.ai/code)**
+
+Co-Authored-By: Claude <noreply@anthropic.com>
