@@ -123,21 +123,11 @@ const ReviewCard = ({
 }) => {
   return (
     <figure
-      className="relative h-full w-64 cursor-pointer overflow-hidden rounded-xl border p-4 transition-all duration-300"
+      className="testimonial-card relative h-full w-64 cursor-pointer overflow-hidden rounded-xl border p-4 transition-all duration-300"
       style={{
         backgroundColor: '#ffffff',
         borderColor: '#03b2a3',
         borderWidth: '2px'
-      }}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.backgroundColor = '#def3fd';
-        e.currentTarget.style.transform = 'translateY(-2px)';
-        e.currentTarget.style.boxShadow = '0 10px 25px rgba(3, 178, 163, 0.15)';
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.backgroundColor = '#ffffff';
-        e.currentTarget.style.transform = 'translateY(0px)';
-        e.currentTarget.style.boxShadow = 'none';
       }}
     >
       <div className="flex flex-row items-center gap-2">

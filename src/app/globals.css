@@ -138,3 +138,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+.testimonial-card:hover {
+  background-color: #def3fd !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(3, 178, 163, 0.15);
+}
