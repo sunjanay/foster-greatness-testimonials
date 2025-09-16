@@ -123,22 +123,30 @@ const ReviewCard = ({
 }) => {
   return (
     <figure
-      className="testimonial-card relative h-full w-64 cursor-pointer overflow-hidden rounded-xl border p-4 transition-all duration-300"
-      style={{
-        backgroundColor: '#ffffff',
-        borderColor: '#03b2a3',
-        borderWidth: '2px'
-      }}
+      className={cn(
+        "relative h-full w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
+        // light styles
+        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
+        // dark styles
+        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
+      )}
     >
       <div className="flex flex-row items-center gap-2">
-        <Image className="rounded-full" width={32} height={32} alt={name} src={img} />
+        <div
+          className="w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-bold"
+          style={{
+            background: `linear-gradient(135deg, #f16549 0%, #03b2a3 25%, #fdb719 50%, #0067a2 75%, #253353 100%)`
+          }}
+        >
+          {name.charAt(0)}
+        </div>
         <div className="flex flex-col">
-          <figcaption className="text-sm font-medium" style={{ color: '#253353' }}>
+          <figcaption className="text-sm font-bold text-black">
             {name}
           </figcaption>
         </div>
       </div>
-      <blockquote className="mt-2 text-sm" style={{ color: '#0067a2' }}>{body}</blockquote>
+      <blockquote className="mt-2 text-sm text-black">{body}</blockquote>
     </figure>
   );
 };
@@ -156,25 +164,19 @@ function MarqueeDemo() {
           <ReviewCard key={review.username} {...review} />
         ))}
       </Marquee>
-      <div
-        className="pointer-events-none absolute inset-y-0 left-0 w-1/4"
-        style={{ background: 'linear-gradient(to right, #def3fd, transparent)' }}
-      ></div>
-      <div
-        className="pointer-events-none absolute inset-y-0 right-0 w-1/4"
-        style={{ background: 'linear-gradient(to left, #def3fd, transparent)' }}
-      ></div>
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
     </div>
   );
 }
 
 export default function Widget() {
   return (
-    <div className="min-h-screen" style={{ background: 'linear-gradient(135deg, #def3fd 0%, #ffffff 50%, #def3fd 100%)' }}>
+    <div className="min-h-screen bg-white">
       <div className="py-20">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4" style={{ color: '#253353' }}>Foster Greatness Testimonials</h1>
-          <p className="text-lg" style={{ color: '#0067a2' }}>Real stories from our community members</p>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Foster Greatness Testimonials</h1>
+          <p className="text-lg text-gray-600">Real stories from our community members</p>
         </div>
         <MarqueeDemo />
       </div>
