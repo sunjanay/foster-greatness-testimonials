@@ -123,24 +123,32 @@ const ReviewCard = ({
 }) => {
   return (
     <figure
-      className={cn(
-        "relative h-full w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
-        // light styles
-        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
-        // dark styles
-        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
-      )}
+      className="relative h-full w-64 cursor-pointer overflow-hidden rounded-xl border p-4 transition-all duration-300"
+      style={{
+        backgroundColor: '#ffffff',
+        borderColor: '#03b2a3',
+        borderWidth: '2px'
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.backgroundColor = '#def3fd';
+        e.currentTarget.style.transform = 'translateY(-2px)';
+        e.currentTarget.style.boxShadow = '0 10px 25px rgba(3, 178, 163, 0.15)';
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.backgroundColor = '#ffffff';
+        e.currentTarget.style.transform = 'translateY(0px)';
+        e.currentTarget.style.boxShadow = 'none';
+      }}
     >
       <div className="flex flex-row items-center gap-2">
         <Image className="rounded-full" width={32} height={32} alt={name} src={img} />
         <div className="flex flex-col">
-          <figcaption className="text-sm font-medium dark:text-white">
+          <figcaption className="text-sm font-medium" style={{ color: '#253353' }}>
             {name}
           </figcaption>
-          <p className="text-xs font-medium dark:text-white/40">{username}</p>
         </div>
       </div>
-      <blockquote className="mt-2 text-sm">{body}</blockquote>
+      <blockquote className="mt-2 text-sm" style={{ color: '#0067a2' }}>{body}</blockquote>
     </figure>
   );
 };
@@ -158,19 +166,25 @@ function MarqueeDemo() {
           <ReviewCard key={review.username} {...review} />
         ))}
       </Marquee>
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
+      <div
+        className="pointer-events-none absolute inset-y-0 left-0 w-1/4"
+        style={{ background: 'linear-gradient(to right, #def3fd, transparent)' }}
+      ></div>
+      <div
+        className="pointer-events-none absolute inset-y-0 right-0 w-1/4"
+        style={{ background: 'linear-gradient(to left, #def3fd, transparent)' }}
+      ></div>
     </div>
   );
 }
 
 export default function Widget() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen" style={{ background: 'linear-gradient(135deg, #def3fd 0%, #ffffff 50%, #def3fd 100%)' }}>
       <div className="py-20">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Foster Greatness Testimonials</h1>
-          <p className="text-lg text-gray-600">Real stories from our community members</p>
+          <h1 className="text-4xl font-bold mb-4" style={{ color: '#253353' }}>Foster Greatness Testimonials</h1>
+          <p className="text-lg" style={{ color: '#0067a2' }}>Real stories from our community members</p>
         </div>
         <MarqueeDemo />
       </div>

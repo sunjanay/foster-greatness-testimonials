@@ -1,20 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "Simple Widget",
-  description: "A simple interactive widget built with Next.js, React, and Tailwind CSS",
+  title: "Foster Greatness Testimonials",
+  description: "Beautiful testimonials widget showcasing Foster Greatness community stories",
 };
 
 export default function RootLayout({
@@ -24,8 +13,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link href="https://fonts.googleapis.com/css2?family=Century+Gothic:wght@400;700&display=swap" rel="stylesheet" />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className="antialiased"
+        style={{ fontFamily: "'Century Gothic', sans-serif" }}
       >
         {children}
       </body>
