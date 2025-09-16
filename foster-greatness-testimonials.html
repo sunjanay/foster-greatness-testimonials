@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foster Greatness Testimonials</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes marquee {
+            from { transform: translateX(0); }
+            to { transform: translateX(calc(-100% - 1rem)); }
+        }
+        @keyframes marquee-reverse {
+            from { transform: translateX(calc(-100% - 1rem)); }
+            to { transform: translateX(0); }
+        }
+        .marquee { animation: marquee 20s linear infinite; }
+        .marquee:hover { animation-play-state: paused; }
+        .marquee-reverse { animation: marquee-reverse 20s linear infinite; }
+        .marquee-reverse:hover { animation-play-state: paused; }
+        .marquee-container {
+            display: flex;
+            overflow: hidden;
+            gap: 1rem;
+        }
+        .testimonial-card {
+            flex: 0 0 auto;
+            width: 16rem;
+            height: auto;
+            min-height: 8rem;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <div class="py-12">
+        <div class="text-center mb-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-2">Foster Greatness Testimonials</h2>
+            <p class="text-gray-600">Real stories from our community members</p>
+        </div>
+
+        <div class="relative w-full overflow-hidden">
+            <!-- First Row -->
+            <div class="marquee-container mb-4">
+                <div class="marquee flex gap-4">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card border border-gray-200 rounded-xl p-4 bg-white hover:bg-gray-50 transition-colors">
+                        <div class="flex items-center gap-2 mb-2">
+                            <img src="https://avatar.vercel.sh/zoey" alt="Zoey Dunkel" class="w-8 h-8 rounded-full">
+                            <div>
+                                <p class="font-medium text-sm">Zoey Dunkel</p>
+                                <p class="text-xs text-gray-500">@zoey</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-700">"Foster Greatness has given me hope during some of my hardest moments. The team made me feel seen, cared for, and not alone."</p>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card border border-gray-200 rounded-xl p-4 bg-white hover:bg-gray-50 transition-colors">
+                        <div class="flex items-center gap-2 mb-2">
+                            <img src="https://avatar.vercel.sh/majd" alt="Majd Abdallah" class="w-8 h-8 rounded-full">
+                            <div>
+                                <p class="font-medium text-sm">Majd Abdallah</p>
+                                <p class="text-xs text-gray-500">@majd</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-700">"A centralized platform like Foster Greatness has been missing for foster kids and under resource people for so long. Y'all are seriously trailblazing!"</p>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card border border-gray-200 rounded-xl p-4 bg-white hover:bg-gray-50 transition-colors">
+                        <div class="flex items-center gap-2 mb-2">
+                            <img src="https://avatar.vercel.sh/michael" alt="Michael Davis-Thomas" class="w-8 h-8 rounded-full">
+                            <div>
+                                <p class="font-medium text-sm">Michael Davis-Thomas</p>
+                                <p class="text-xs text-gray-500">@michael</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-700">"Through Foster Greatness, I discovered a renewed sense of purpose, which has fueled personal growth and boosted my professional confidence."</p>
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div class="testimonial-card border border-gray-200 rounded-xl p-4 bg-white hover:bg-gray-50 transition-colors">
+                        <div class="flex items-center gap-2 mb-2">
+                            <img src="https://avatar.vercel.sh/taylor" alt="Taylor Rockhold" class="w-8 h-8 rounded-full">
+                            <div>
+                                <p class="font-medium text-sm">Taylor Rockhold</p>
+                                <p class="text-xs text-gray-500">@taylor</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-700">"Foster Greatness helped me tap into strengths I didn't even know I had."</p>
+                    </div>
+
+                    <!-- Testimonial 5 -->
+                    <div class="testimonial-card border border-gray-200 rounded-xl p-4 bg-white hover:bg-gray-50 transition-colors">
+                        <div class="flex items-center gap-2 mb-2">
+                            <img src="https://avatar.vercel.sh/eugenia" alt="Eugenia Doreen" class="w-8 h-8 rounded-full">
+                            <div>
+                                <p class="font-medium text-sm">Eugenia Doreen</p>
+                                <p class="text-xs text-gray-500">@eugenia</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-700">"Foster Greatness is more than an organization—it's a movement rooted in innovation, transformation, and joy."</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Row (Reverse) -->
+            <div class="marquee-container">
+                <div class="marquee-reverse flex gap-4">
+                    <!-- Testimonial 6 -->
+                    <div class="testimonial-card border border-gray-200 rounded-xl p-4 bg-white hover:bg-gray-50 transition-colors">
+                        <div class="flex items-center gap-2 mb-2">
+                            <img src="https://avatar.vercel.sh/julie" alt="Julie Ong" class="w-8 h-8 rounded-full">
+                            <div>
+                                <p class="font-medium text-sm">Julie Ong</p>
+                                <p class="text-xs text-gray-500">@julie</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-700">"As I enter CSU for the fall semester, I know I can count on Foster Greatness for their continued support and helpful resources!"</p>
+                    </div>
+
+                    <!-- Testimonial 7 -->
+                    <div class="testimonial-card border border-gray-200 rounded-xl p-4 bg-white hover:bg-gray-50 transition-colors">
+                        <div class="flex items-center gap-2 mb-2">
+                            <img src="https://avatar.vercel.sh/jessica" alt="Jessica Patino" class="w-8 h-8 rounded-full">
+                            <div>
+                                <p class="font-medium text-sm">Jessica Patino</p>
+                                <p class="text-xs text-gray-500">@jessica</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-700">"Because of their consistent support, I feel stronger, connected, and equipped to build a brighter future for my family too."</p>
+                    </div>
+
+                    <!-- Testimonial 8 -->
+                    <div class="testimonial-card border border-gray-200 rounded-xl p-4 bg-white hover:bg-gray-50 transition-colors">
+                        <div class="flex items-center gap-2 mb-2">
+                            <img src="https://avatar.vercel.sh/emmerald" alt="Emmerald Evans" class="w-8 h-8 rounded-full">
+                            <div>
+                                <p class="font-medium text-sm">Emmerald Evans</p>
+                                <p class="text-xs text-gray-500">@emmerald</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-700">"They didn't just ask me to share my story—they gave me the tools to shape it, own it, and use it to make an impact."</p>
+                    </div>
+
+                    <!-- Testimonial 9 -->
+                    <div class="testimonial-card border border-gray-200 rounded-xl p-4 bg-white hover:bg-gray-50 transition-colors">
+                        <div class="flex items-center gap-2 mb-2">
+                            <img src="https://avatar.vercel.sh/chyenne" alt="Chyenne Santini" class="w-8 h-8 rounded-full">
+                            <div>
+                                <p class="font-medium text-sm">Chyenne Santini</p>
+                                <p class="text-xs text-gray-500">@chyenne</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-700">"Having the opportunity to be part of the very first cohort of the Storyteller Collective ignited a fire of inspiration within me."</p>
+                    </div>
+
+                    <!-- Testimonial 10 -->
+                    <div class="testimonial-card border border-gray-200 rounded-xl p-4 bg-white hover:bg-gray-50 transition-colors">
+                        <div class="flex items-center gap-2 mb-2">
+                            <img src="https://avatar.vercel.sh/stormy" alt="Stormy Lukasavage" class="w-8 h-8 rounded-full">
+                            <div>
+                                <p class="font-medium text-sm">Stormy Lukasavage</p>
+                                <p class="text-xs text-gray-500">@stormy</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-700">"Foster Greatness pioneers the concept of involved participation and takes it to the next level by making it accessible and open."</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gradient fade effects -->
+            <div class="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-white to-transparent pointer-events-none"></div>
+            <div class="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-white to-transparent pointer-events-none"></div>
+        </div>
+    </div>
+</body>
+</html>

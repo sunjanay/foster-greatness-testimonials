@@ -1,0 +1,175 @@
+<!-- Foster Greatness Testimonials Widget for Squarespace -->
+<div id="foster-testimonials-widget">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes marquee {
+            from { transform: translateX(0); }
+            to { transform: translateX(calc(-100% - 1rem)); }
+        }
+        @keyframes marquee-reverse {
+            from { transform: translateX(calc(-100% - 1rem)); }
+            to { transform: translateX(0); }
+        }
+        .fg-marquee { animation: marquee 20s linear infinite; }
+        .fg-marquee:hover { animation-play-state: paused; }
+        .fg-marquee-reverse { animation: marquee-reverse 20s linear infinite; }
+        .fg-marquee-reverse:hover { animation-play-state: paused; }
+        .fg-marquee-container {
+            display: flex;
+            overflow: hidden;
+            gap: 1rem;
+        }
+        .fg-testimonial-card {
+            flex: 0 0 auto;
+            width: 16rem;
+            height: auto;
+            min-height: 8rem;
+        }
+        #foster-testimonials-widget {
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+    </style>
+
+    <div style="padding: 3rem 0; background: white;">
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <h2 style="font-size: 2rem; font-weight: bold; color: #111827; margin-bottom: 0.5rem;">Foster Greatness Testimonials</h2>
+            <p style="color: #6b7280;">Real stories from our community members</p>
+        </div>
+
+        <div style="position: relative; width: 100%; overflow: hidden;">
+            <!-- First Row -->
+            <div class="fg-marquee-container" style="margin-bottom: 1rem;">
+                <div class="fg-marquee" style="display: flex; gap: 1rem;">
+                    <!-- Testimonial 1 -->
+                    <div class="fg-testimonial-card" style="border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1rem; background: white; transition: background-color 0.2s;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                            <img src="https://avatar.vercel.sh/zoey" alt="Zoey Dunkel" style="width: 2rem; height: 2rem; border-radius: 50%;">
+                            <div>
+                                <p style="font-weight: 500; font-size: 0.875rem; margin: 0;">Zoey Dunkel</p>
+                                <p style="font-size: 0.75rem; color: #6b7280; margin: 0;">@zoey</p>
+                            </div>
+                        </div>
+                        <p style="font-size: 0.875rem; color: #374151; margin: 0;">"Foster Greatness has given me hope during some of my hardest moments. The team made me feel seen, cared for, and not alone."</p>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="fg-testimonial-card" style="border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1rem; background: white; transition: background-color 0.2s;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                            <img src="https://avatar.vercel.sh/majd" alt="Majd Abdallah" style="width: 2rem; height: 2rem; border-radius: 50%;">
+                            <div>
+                                <p style="font-weight: 500; font-size: 0.875rem; margin: 0;">Majd Abdallah</p>
+                                <p style="font-size: 0.75rem; color: #6b7280; margin: 0;">@majd</p>
+                            </div>
+                        </div>
+                        <p style="font-size: 0.875rem; color: #374151; margin: 0;">"A centralized platform like Foster Greatness has been missing for foster kids and under resource people for so long. Y'all are seriously trailblazing!"</p>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="fg-testimonial-card" style="border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1rem; background: white; transition: background-color 0.2s;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                            <img src="https://avatar.vercel.sh/michael" alt="Michael Davis-Thomas" style="width: 2rem; height: 2rem; border-radius: 50%;">
+                            <div>
+                                <p style="font-weight: 500; font-size: 0.875rem; margin: 0;">Michael Davis-Thomas</p>
+                                <p style="font-size: 0.75rem; color: #6b7280; margin: 0;">@michael</p>
+                            </div>
+                        </div>
+                        <p style="font-size: 0.875rem; color: #374151; margin: 0;">"Through Foster Greatness, I discovered a renewed sense of purpose, which has fueled personal growth and boosted my professional confidence."</p>
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div class="fg-testimonial-card" style="border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1rem; background: white; transition: background-color 0.2s;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                            <img src="https://avatar.vercel.sh/taylor" alt="Taylor Rockhold" style="width: 2rem; height: 2rem; border-radius: 50%;">
+                            <div>
+                                <p style="font-weight: 500; font-size: 0.875rem; margin: 0;">Taylor Rockhold</p>
+                                <p style="font-size: 0.75rem; color: #6b7280; margin: 0;">@taylor</p>
+                            </div>
+                        </div>
+                        <p style="font-size: 0.875rem; color: #374151; margin: 0;">"Foster Greatness helped me tap into strengths I didn't even know I had."</p>
+                    </div>
+
+                    <!-- Testimonial 5 -->
+                    <div class="fg-testimonial-card" style="border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1rem; background: white; transition: background-color 0.2s;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                            <img src="https://avatar.vercel.sh/eugenia" alt="Eugenia Doreen" style="width: 2rem; height: 2rem; border-radius: 50%;">
+                            <div>
+                                <p style="font-weight: 500; font-size: 0.875rem; margin: 0;">Eugenia Doreen</p>
+                                <p style="font-size: 0.75rem; color: #6b7280; margin: 0;">@eugenia</p>
+                            </div>
+                        </div>
+                        <p style="font-size: 0.875rem; color: #374151; margin: 0;">"Foster Greatness is more than an organization—it's a movement rooted in innovation, transformation, and joy."</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Row (Reverse) -->
+            <div class="fg-marquee-container">
+                <div class="fg-marquee-reverse" style="display: flex; gap: 1rem;">
+                    <!-- Testimonial 6 -->
+                    <div class="fg-testimonial-card" style="border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1rem; background: white; transition: background-color 0.2s;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                            <img src="https://avatar.vercel.sh/julie" alt="Julie Ong" style="width: 2rem; height: 2rem; border-radius: 50%;">
+                            <div>
+                                <p style="font-weight: 500; font-size: 0.875rem; margin: 0;">Julie Ong</p>
+                                <p style="font-size: 0.75rem; color: #6b7280; margin: 0;">@julie</p>
+                            </div>
+                        </div>
+                        <p style="font-size: 0.875rem; color: #374151; margin: 0;">"As I enter CSU for the fall semester, I know I can count on Foster Greatness for their continued support and helpful resources!"</p>
+                    </div>
+
+                    <!-- Testimonial 7 -->
+                    <div class="fg-testimonial-card" style="border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1rem; background: white; transition: background-color 0.2s;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                            <img src="https://avatar.vercel.sh/jessica" alt="Jessica Patino" style="width: 2rem; height: 2rem; border-radius: 50%;">
+                            <div>
+                                <p style="font-weight: 500; font-size: 0.875rem; margin: 0;">Jessica Patino</p>
+                                <p style="font-size: 0.75rem; color: #6b7280; margin: 0;">@jessica</p>
+                            </div>
+                        </div>
+                        <p style="font-size: 0.875rem; color: #374151; margin: 0;">"Because of their consistent support, I feel stronger, connected, and equipped to build a brighter future for my family too."</p>
+                    </div>
+
+                    <!-- Testimonial 8 -->
+                    <div class="fg-testimonial-card" style="border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1rem; background: white; transition: background-color 0.2s;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                            <img src="https://avatar.vercel.sh/emmerald" alt="Emmerald Evans" style="width: 2rem; height: 2rem; border-radius: 50%;">
+                            <div>
+                                <p style="font-weight: 500; font-size: 0.875rem; margin: 0;">Emmerald Evans</p>
+                                <p style="font-size: 0.75rem; color: #6b7280; margin: 0;">@emmerald</p>
+                            </div>
+                        </div>
+                        <p style="font-size: 0.875rem; color: #374151; margin: 0;">"They didn't just ask me to share my story—they gave me the tools to shape it, own it, and use it to make an impact."</p>
+                    </div>
+
+                    <!-- Testimonial 9 -->
+                    <div class="fg-testimonial-card" style="border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1rem; background: white; transition: background-color 0.2s;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                            <img src="https://avatar.vercel.sh/chyenne" alt="Chyenne Santini" style="width: 2rem; height: 2rem; border-radius: 50%;">
+                            <div>
+                                <p style="font-weight: 500; font-size: 0.875rem; margin: 0;">Chyenne Santini</p>
+                                <p style="font-size: 0.75rem; color: #6b7280; margin: 0;">@chyenne</p>
+                            </div>
+                        </div>
+                        <p style="font-size: 0.875rem; color: #374151; margin: 0;">"Having the opportunity to be part of the very first cohort of the Storyteller Collective ignited a fire of inspiration within me."</p>
+                    </div>
+
+                    <!-- Testimonial 10 -->
+                    <div class="fg-testimonial-card" style="border: 1px solid #e5e7eb; border-radius: 0.75rem; padding: 1rem; background: white; transition: background-color 0.2s;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                            <img src="https://avatar.vercel.sh/stormy" alt="Stormy Lukasavage" style="width: 2rem; height: 2rem; border-radius: 50%;">
+                            <div>
+                                <p style="font-weight: 500; font-size: 0.875rem; margin: 0;">Stormy Lukasavage</p>
+                                <p style="font-size: 0.75rem; color: #6b7280; margin: 0;">@stormy</p>
+                            </div>
+                        </div>
+                        <p style="font-size: 0.875rem; color: #374151; margin: 0;">"Foster Greatness pioneers the concept of involved participation and takes it to the next level by making it accessible and open."</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gradient fade effects -->
+            <div style="position: absolute; top: 0; bottom: 0; left: 0; width: 5rem; background: linear-gradient(to right, white, transparent); pointer-events: none;"></div>
+            <div style="position: absolute; top: 0; bottom: 0; right: 0; width: 5rem; background: linear-gradient(to left, white, transparent); pointer-events: none;"></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Widget</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes marquee {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+        .marquee { animation: marquee 15s linear infinite; }
+        .marquee:hover { animation-play-state: paused; }
+
+        @keyframes marquee-reverse {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(100%); }
+        }
+        .marquee-reverse { animation: marquee-reverse 20s linear infinite; }
+        .marquee-reverse:hover { animation-play-state: paused; }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-100 flex flex-col">
+    <!-- Top Marquee -->
+    <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 overflow-hidden">
+        <div class="marquee whitespace-nowrap">
+            <span class="mx-8 text-lg font-medium">🎉 Welcome to the widget!</span>
+            <span class="mx-8 text-lg font-medium">⚡ Built with HTML & CSS</span>
+            <span class="mx-8 text-lg font-medium">🎨 Styled with Tailwind</span>
+            <span class="mx-8 text-lg font-medium">🚀 Pure JavaScript</span>
+            <span class="mx-8 text-lg font-medium">✨ Fully Interactive</span>
+        </div>
+    </div>
+
+    <!-- Main Widget -->
+    <div class="flex-1 flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg shadow-lg p-6 max-w-md w-full">
+            <h1 class="text-2xl font-bold text-gray-800 mb-4 text-center">
+                Interactive Widget
+            </h1>
+
+            <div class="space-y-4">
+                <div class="text-center">
+                    <p id="message-display" class="text-gray-600 mb-2">Hello from your widget!</p>
+                    <input
+                        id="message-input"
+                        type="text"
+                        value="Hello from your widget!"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        placeholder="Edit your message..."
+                    />
+                </div>
+
+                <div class="text-center">
+                    <p id="counter-display" class="text-gray-600 mb-2">Counter: 0</p>
+                    <div class="flex gap-2 justify-center">
+                        <button
+                            id="decrement"
+                            class="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition-colors"
+                        >
+                            -
+                        </button>
+                        <button
+                            id="reset"
+                            class="px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600 transition-colors"
+                        >
+                            Reset
+                        </button>
+                        <button
+                            id="increment"
+                            class="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 transition-colors"
+                        >
+                            +
+                        </button>
+                    </div>
+                </div>
+
+                <div class="text-center pt-4 border-t border-gray-200">
+                    <p class="text-sm text-gray-500">
+                        Built with HTML, CSS & JavaScript
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Marquee -->
+    <div class="bg-gray-800 text-white py-3 overflow-hidden">
+        <div id="bottom-marquee" class="marquee-reverse whitespace-nowrap">
+            <span class="mx-6 text-sm">🔄 Counter: 0</span>
+            <span class="mx-6 text-sm">💬 Message: "Hello from your widget!"</span>
+            <span class="mx-6 text-sm">🎯 Interactive Widget Demo</span>
+            <span class="mx-6 text-sm">🌟 Hover to pause</span>
+        </div>
+    </div>
+
+    <script>
+        let count = 0;
+        let message = 'Hello from your widget!';
+
+        // Get elements
+        const messageDisplay = document.getElementById('message-display');
+        const messageInput = document.getElementById('message-input');
+        const counterDisplay = document.getElementById('counter-display');
+        const bottomMarquee = document.getElementById('bottom-marquee');
+        const incrementBtn = document.getElementById('increment');
+        const decrementBtn = document.getElementById('decrement');
+        const resetBtn = document.getElementById('reset');
+
+        // Update displays
+        function updateDisplays() {
+            messageDisplay.textContent = message;
+            counterDisplay.textContent = `Counter: ${count}`;
+            bottomMarquee.innerHTML = `
+                <span class="mx-6 text-sm">🔄 Counter: ${count}</span>
+                <span class="mx-6 text-sm">💬 Message: "${message}"</span>
+                <span class="mx-6 text-sm">🎯 Interactive Widget Demo</span>
+                <span class="mx-6 text-sm">🌟 Hover to pause</span>
+            `;
+        }
+
+        // Event listeners
+        messageInput.addEventListener('input', (e) => {
+            message = e.target.value;
+            updateDisplays();
+        });
+
+        incrementBtn.addEventListener('click', () => {
+            count++;
+            updateDisplays();
+        });
+
+        decrementBtn.addEventListener('click', () => {
+            count--;
+            updateDisplays();
+        });
+
+        resetBtn.addEventListener('click', () => {
+            count = 0;
+            updateDisplays();
+        });
+    </script>
+</body>
+</html>
